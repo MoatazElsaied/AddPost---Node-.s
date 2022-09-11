@@ -1,0 +1,25 @@
+{{>header}}
+{{>navbar}}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{this._id}}</td>
+            <td>{{this.name}}</td>
+            <td>
+                <a href="/single/{{this._id}}" class="btn btn-primary mx-2">Show</a>
+                <a href="/edit/{{this._id}}" class="btn btn-warning mx-2">Edit</a>
+                <a href="/del/{{this._id}}" class="btn btn-danger mx-2">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{>footer}}

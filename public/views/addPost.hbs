@@ -1,0 +1,23 @@
+{{>header}}
+{{>navbar}}
+    <form method="post">
+         {{!-- action="/addPostLogic"> --}}
+        <div class="mb-3">
+            <input placeholder="Name" name="name" 
+            class="form-control" value="{{data.name}}">
+            <p>{{errors.name}}</p>
+        </div>
+        <div class="mb-3">
+            <input placeholder="Email" name="email" class="form-control"
+            value="{{data.email}}">
+            <p>{{errors.email}}</p>
+        </div>
+        <div class="mb-3">
+            <input placeholder="Age" name="age" class="form-control" value="{{data.age}}">
+            <p>{{errors.age}}</p>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </form>
+{{>footer}}

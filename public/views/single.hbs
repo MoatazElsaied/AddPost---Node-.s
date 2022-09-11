@@ -1,0 +1,17 @@
+{{>header}}
+{{>navbar}}
+{{#unless user}}
+
+<div class="alert alert-danger">
+    user not found
+</div>
+
+{{else}}
+<ul class="list-group">
+<li class="list-group-item"> ID : {{user._id}}</li>
+<li class="list-group-item">userName : {{user.name}}</li>
+<li class="list-group-item">Email : {{user.email}}</li>
+<li class="list-group-item">Age : {{user.age}}</li>
+</ul>
+{{/unless}}
+{{>footer}}

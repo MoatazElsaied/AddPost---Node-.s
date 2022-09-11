@@ -1,0 +1,23 @@
+{{>header}}
+{{>navbar}}
+{{#unless user}}
+    <div class="alert alert-danger">
+        user not found
+    </div>
+{{else}}
+    <form method="post">
+        <div class="mb-3">
+            <input placeholder="Name" name="name" class="form-control" value="{{user.name}}">
+        </div>
+        <div class="mb-3">
+            <input placeholder="Email" name="email" class="form-control" value="{{user.email}}">
+        </div>
+        <div class="mb-3">
+            <input placeholder="Age" name="age" class="form-control" value="{{user.age}}">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Edit</button>
+        </div>
+    </form>
+    {{/unless}}
+{{>footer}}
